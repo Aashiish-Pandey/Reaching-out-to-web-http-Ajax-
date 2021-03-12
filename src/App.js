@@ -3,6 +3,10 @@ import axios from 'axios'
 
 import Blog from './containers/Blog/Blog';
 
+axios.defaults.baseURL = 'https://jsonplaceholder.typicode.com'
+axios.defaults.headers.common['Authorisation'] = 'AUTH TOKEN'
+axios.defaults.headers.post[content-type] = 'applcation/json'
+
 axios.interceptors.request.use(request => {
 
   console.log(request)
